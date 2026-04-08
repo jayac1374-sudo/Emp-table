@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>EmpToMgrDeptJoin</h1>
+
+        <table border="3px">
+            <tr>
+                <th>Employee Name</th>
+                <th>Emp No</th>
+                <th>Emp SAL</th>
+                <th>Emp Job</th>
+                <th>Employee's Manager</th>
+                <th>Emp Hiredate</th>
+                <th>Emp Commission</th>
+                <th>Emp Dept No</th>
+                <th>Manager Name</th>
+                <th>Mgr Emp No</th>
+                <th>Mgr SAL</th>
+                <th>Manager Job</th>
+                <th>Manager's Manager</th>
+                <th>Manager Hiredate</th>
+                <th>Manager Commission</th>
+                <th>Dept Dept Number</th>
+                <th>Dept Name</th>
+                <th>Location</th>
+            </tr>
+
+            {% for EDMO in QSLEDMO %}
+                <tr>
+                    <td>{{EDMO.eName}}</td>
+                    <td>{{EDMO.empNo}}</td>
+                    <td>{{EDMO.sal}}</td>
+                    <td>{{EDMO.job}}</td>
+                    <td>{{EDMO.mgr}}</td>
+                    <td>{{EDMO.hireDate}}</td>
+                    <td>{{EDMO.comm}}</td>
+                    <td>{{EDMO.deptNo}}</td>
+                    <td>{{EDMO.mgr.eName}}</td>
+                    <td>{{EDMO.mgr.empNo}}</td>
+                    <td>{{EDMO.mgr.sal}}</td>
+                    <td>{{EDMO.mgr.job}}</td>
+                    <td>{{EDMO.mgr.mgr}}</td>
+                    <td>{{EDMO.mgr.hireDate}}</td>
+                    <td>{{EDMO.mgr.comm}}</td>
+                    <td>{{EDMO.deptNo.deptNo}}</td>
+                    <td>{{EDMO.deptNo.dName}}</td>
+                    <td>{{EDMO.deptNo.loc}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </center>
+</body>
+</html>

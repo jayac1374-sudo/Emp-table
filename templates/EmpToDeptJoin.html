@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>EmpToDeptJoin</h1>
+        <table border="3px">
+            <tr>
+                <th>Emp No</th>
+                <th>Emp Name</th>
+                <th>Job</th>
+                <th>Manager Emp No</th>
+                <th>Hiredate</th>
+                <th>Salary</th>
+                <th>Commission</th>
+                <th>Dept No</th>
+                <th>Dept Dept Number</th>
+                <th>Dept Name</th>
+                <th>Location</th>
+            </tr>
+
+            {% for EDO in QSLEDO %}
+                <tr>
+                    <td>{{EDO.empNo}}</td>
+                    <td>{{EDO.eName}}</td>
+                    <td>{{EDO.job}}</td>
+                    <td>{{EDO.mgr}}</td>
+                    <td>{{EDO.hireDate}}</td>
+                    <td>{{EDO.sal}}</td>
+                    <td>{{EDO.comm}}</td>
+                    <td>{{EDO.deptNo}}</td>
+                    <td>{{EDO.deptNo.deptNo}}</td>
+                    <td>{{EDO.deptNo.dName}}</td>
+                    <td>{{EDO.deptNo.loc}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
